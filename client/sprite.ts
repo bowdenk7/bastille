@@ -1,8 +1,7 @@
 var _ = require('lodash')
 
-module.exports = Sprite
 
-function Sprite(atlas, meta, name, startTime) {
+export function Sprite(atlas, meta, name, startTime) {
   this.startTime = firstDefined([startTime, now()])
   this.atlas = atlas
   meta[name] && _.extend(this, meta[name])

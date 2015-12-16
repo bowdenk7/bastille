@@ -2,6 +2,6 @@
     "compilerOptions": {
         "module": "commonjs",
         "target": "ES6",
-        "out": "out.js"
+        "out": "../out"
     }
 }

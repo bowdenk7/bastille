@@ -1,7 +1,7 @@
 var td = require('testdouble')
   , props = require('../../canvas-properties')
 
-module.exports = {
+exports = {
   mockCanvasContext: function() {
     return {
       clearRect: td.create()

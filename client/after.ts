@@ -1,6 +1,5 @@
-module.exports = After
 
-function After(time, cb) {
+export function After(time, cb) {
   this.afterTime = time
   this.cb = cb
 }
