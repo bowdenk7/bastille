@@ -1,8 +1,48 @@
 var test = require('tape')
   , path = require('path')
 
-test.createStream().pipe(process.stdout)
-
-process.argv.slice(2).forEach(function (file) {
-    require(path.resolve(file))
-})
+require('test-all-sprites.js');
+require('test-atlas.js');
+require('test-background.js');
+require('test-client-main.js');
+require('test-collider.js');
+require('test-core-camera.js');
+require('test-core-input.js');
+require('test-core-priority-stack.js');
+require('test-core.js');
+require('test-delegate-with-transform.js');
+require('test-dynamic-weapon.js');
+require('test-fetch-env.js');
+require('test-float-within.js');
+require('test-follow.js');
+require('test-format-base64-for-html.js');
+require('test-generate-encapsulating-bound.js');
+require('test-layer-selector.js');
+require('test-level-editor-cursor.js');
+require('test-level-editor-piece-placer.js');
+require('test-level-editor-piece-previewer.js');
+require('test-level-editor-script-to-game-object.js');
+require('test-level-editor-serialize.js');
+require('test-median.js');
+require('test-new-f-apply.js');
+require('test-oscillate-between-values.js');
+require('test-overlay-inspector.js');
+require('test-priority-prompt.js');
+require('test-prompt.js');
+require('test-receive-damage.js');
+require('test-remove-obj-after-time.js');
+require('test-renderable-string.js');
+require('test-scene-level-editor.js');
+require('test-scene-loader.js');
+require('test-spawn-from-script.js');
+require('test-sprite-name-prefixes.js');
+require('test-sprite-preconfigured.js');
+require('test-sprite.js');
+require('test-static-collider.js');
+require('test-sub-region.js');
+require('test-tee-callback.js');
+require('test-text-formatter.js');
+require('test-text-less.js');
+require('test-tile-map.js');
+require('test-vector.js');
+require('test-word-directions.js');

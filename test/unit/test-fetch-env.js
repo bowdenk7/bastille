@@ -1,5 +1,4 @@
 var test = require('tape')
-  , f = require('../../fetch-env')
 
 test('retrieves env var on success', function(t) {
   t.plan(1)

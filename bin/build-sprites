@@ -1,5 +1,0 @@
-#!/bin/bash
-
-set -e
-
-node node_modules/gamefroot-texture-packer/index.js media/sprites/*.png -n media/atlas

@@ -1,7 +1,6 @@
 var http = require('http')
-  , fetch = require('../fetch-env')
-  , HOST=fetch('HOST')
-  , PORT=fetch('PORT')
+  , HOST='localhost'
+  , PORT=5858
 
 var request = module.exports = function(opts, cb) {
       var options = merge({ host: HOST , port: PORT }, opts)

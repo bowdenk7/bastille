@@ -7,7 +7,7 @@ var app = require('../../server')
   , server
 
 test('start server', function(t) {
-  server = app.listen(fetch('PORT'))
+  server = app.listen(5858)
   t.end()
 })
 
