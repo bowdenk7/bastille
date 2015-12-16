@@ -3,7 +3,10 @@ var format = require('../format-base64-for-html')
   , data = format.apply(format, media.images.atlas)
   , atlasIndex = require('./sprite-atlas-index')
 
-if(typeof Image === "undefined") { stubImageIfGlobalUnavailable() }
+if(typeof Image === "undefined") { 
+    Image = function() { }
+    Image.prototype = { isTestHelper: true } 
+}
 
 module.exports = {
   image: (function() {
@@ -20,7 +23,3 @@ module.exports = {
   }
 }
 
-function stubImageIfGlobalUnavailable() {
-  Image = function() { }
-  Image.prototype = { isTestHelper: true }
-}

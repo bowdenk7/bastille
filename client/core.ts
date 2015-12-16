@@ -1,8 +1,6 @@
 var _ = require('lodash')
 
-module.exports = Core
-
-function Core(window, context) {
+export function Core(window, context) {
   this.window = window
   this.document = this.window.document
   this.lastUpdate = new Date().getTime()

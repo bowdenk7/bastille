@@ -1,7 +1,5 @@
 var sprites = require('./all-sprites')
-module.exports = BackgroundObj
-
-function BackgroundObj(backgroundString) {
+export function BackgroundObj(backgroundString) {
   this.backgroundString = backgroundString
 }
 

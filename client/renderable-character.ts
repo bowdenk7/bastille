@@ -10,7 +10,10 @@ module.exports = Character
 
 Character.draw = Unconfigured.draw
 
-if(typeof Image === "undefined") { stubImageIfGlobalUnavailable() }
+if(typeof Image === "undefined") { 
+    Image = function() { }
+    Image.prototype = { isTestHelper: true }
+ }
 
 function fontAtlas() {
   return {
@@ -27,9 +30,4 @@ function fontAtlas() {
       return this.index.frames[frameName]
     }
   }
-}
-
-function stubImageIfGlobalUnavailable() {
-  Image = function() { }
-  Image.prototype = { isTestHelper: true }
 }
