@@ -3,20 +3,28 @@ var Sprite = require('./sprite')
 
 module.exports = Particle
 
-function Particle(spriteName, options) {
-  this.sprite = sprites.get(spriteName)
-  this.x = options.x
-  this.y = options.y
-}
 
-Particle.prototype = {
-  dx: 0
-, dy: 0
-, update: function(core) {
-    this.x += this.dx
-    this.y += this.dy
-  }
-, draw: Sprite.draw
-, get spriteX() { return this.x - this.sprite.width/2 }
-, get spriteY() { return this.y - this.sprite.height/2 }
+
+class Particle {
+    sprite;
+    x;
+    y;
+    dx;
+    dy;
+    
+    constructor(spriteName, options) {
+        this.sprite = sprites.get(spriteName);
+        this.x = options.x;
+        this.y = options.y;
+        this.dx = 0;
+        this.dy = 0;
+    }
+    
+    update(core):void {
+        this.x += this.dx;
+        this.y += this.dy;
+    }
+    draw(): {Sprite.draw}
+    spriteX():number { return this.x - this.sprite.width/2 }
+    spriteY():number { return this.y - this.sprite.height/2 }
 }
